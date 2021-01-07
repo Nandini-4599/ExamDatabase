@@ -1,9 +1,46 @@
 create database Exam
-create table student(id int identity(1,1) primary key,email varchar(50),fullname varchar(60),password varchar(40),age int,gender varchar(30)
-check (gender in('male','female')),city varchar(100),state varchar(100))
-
 USE [Exam]
 GO
+
+/****** Object:  Table [dbo].[student]    Script Date: 07-01-2021 09:29:34 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[student](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[email] [varchar](50) NULL,
+	[fullname] [varchar](60) NULL,
+	[password] [varchar](40) NULL,
+	[age] [int] NULL,
+	[gender] [varchar](30) NULL,
+	[city] [varchar](100) NULL,
+	[state] [varchar](100) NULL,
+	[dob] [date] NULL,
+	[year] [int] NULL,
+	[qualification] [varchar](100) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+UNIQUE NONCLUSTERED 
+(
+	[email] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+-------------------------------------------------
 
 /****** Object:  StoredProcedure [dbo].[proc_LoginCheck]    Script Date: 07-01-2021 00:11:40 ******/
 SET ANSI_NULLS ON
