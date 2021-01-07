@@ -89,7 +89,6 @@ GO
 INSERT [dbo].[Question] ([QnID], [Qn], [ImageName], [Option1], [Option2], [Option3], [Option4], [Answer],[exam_level],[subject]) VALUES (18, N'Following picture represnts.', N'q17.png', N'Full Outer Join', N'Left Join', N'Right Join', N'Inner Join', 3,1,'SQL')
 GO
 
-select * from Question
 -----------------------------
 
 /****** Object:  StoredProcedure [dbo].[getValuesbySubject]    Script Date: 07-01-2021 09:04:59 ******/
